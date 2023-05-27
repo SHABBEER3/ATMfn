@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ATM</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div>
+        <div id="error"></div>
+        <div id="accountbalance">
+            <p>Account balance: <span id="accountbalance1">0</span></p>
+        </div>
+        <br>
+        <div id="withdraw">
+            <input type="text" id="withdraw1" placeholder="Enter amount to withdraw" />
+            <br>
+            <button onclick="withdraw2()">Withdraw</button>
+        </div>
+        <br>
+        <div id="deposit">
+            <input type="text" id="dp" placeholder="Enter amount to deposit" />
+            <br>
+            <button onclick="deposit1()">Deposit</button>
+        </div>
+        <br>
+        <div id="sendmoney">
+            <input type="text" id="upi" placeholder="Enter UPI or account number" />
+            <br>
+            <input type="text" id="sm" placeholder="Enter amount to send" />
+            <br>
+            <button onclick="send()">Send</button>
+        </div>
+    </div>
+    <script>
+        let accountbalance = 0;
+        let accountbalance1 = document.getElementById("accountbalance1").innerHTML;
+
+        function withdraw2() {
+            let withdraw = parseFloat(document.getElementById("withdraw1").value);
+            if (accountbalance >= withdraw) {
+                accountbalance -= withdraw;
+                document.getElementById("accountbalance1").innerHTML = accountbalance;
+            } else {
+                document.getElementById("error").innerHTML = "Insufficient funds";
+            }
+        }
+
+        function deposit1() {
+            let deposit = parseFloat(document.getElementById("dp").value);
+            accountbalance += deposit;
+            document.getElementById("accountbalance1").innerHTML = accountbalance;
+        }
+
+        function send() {
+            let money = parseFloat(document.getElementById("sm").value);
+            cmd
+            if (accountbalance >= money) {
+                accountbalance -= money;
+                document.getElementById("accountbalance1").innerHTML = accountbalance;
+            } else {
+                document.getElementById("error").innerHTML = "Insufficient funds";
+            }
+        }
+    </script>
+</body>
+
+</html>

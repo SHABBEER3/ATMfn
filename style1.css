@@ -1,0 +1,31 @@
+body{
+    background-color: blanchedalmond;
+}
+#error{
+    background-color: red;
+    text-align: center;
+    color: white;
+}
+#accountbalance{
+    background-color: Green;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    padding: 5%;
+    font-size: xx-large;
+}
+#withdraw{
+    background-color: blue;
+    /*display: inline-block;*/
+    text-align: center;
+}
+#deposit{
+    background-color: skyblue;
+  /*  display: inline-block;*/
+    text-align: center;
+}
+#sendmoney{
+    background-color: aqua;
+    /*display: inline-block;*/
+    text-align: center;
+}
